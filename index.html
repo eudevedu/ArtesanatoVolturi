@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./src/img/icon-volturi.png">
+  <title>Artesanato Volturi</title>
+  <link rel="stylesheet" href="./src/index.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Artesanato Volturi</h1>
+
+    <div class="formulario">
+      <!-- <label for="nome">Nome:</label> -->
+      <input placeholder="Seu nome" type="text" id="nome" maxlength="25" />
+
+      <!-- <label for="pombo">Pombo:</label> -->
+      <input placeholder="Pombo" type="number" id="pombo" />
+    </div>
+
+    <h3>Produtos Disponíveis</h3>
+    <table id="tabelaProdutos">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <p class="total" id="totalPedido">Total do Pedido: R$ 0,00</p>
+
+    <button type="button" onclick="enviarPedido()">Enviar seu Pedido</button>
+  </div>
+
+  <script src="./src/produtos.js"></script>
+</body>
+
+</html>
