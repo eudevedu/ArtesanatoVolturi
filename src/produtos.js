@@ -84,16 +84,19 @@ document.addEventListener("DOMContentLoaded", () => {
     pedido += `\n💰 Total: R$ ${total.toFixed(2)}`;
 
     try {
-      await fetch(
-        "https://discord.com/api/webhooks/1385725607245250642/kyubfcOEk7bY2lT9_0sTbUHLFJ2bOU1iigPCnH4iRvwcDeV7SBGgv74BJrYwXuwSm5qk", // Insira aqui o webhook do Discord, se quiser testar
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ content: pedido }),
-        }
-      );
+      await fetch("https://devedusb.app.n8n.cloud/webhook/enviar-pedido", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          nome,
+          pombo,
+          pedido,
+          total: total.toFixed(2)
+        })
+      });
+
 
       alert("Pedido enviado com sucesso!");
 
